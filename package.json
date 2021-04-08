@@ -10,7 +10,7 @@
     "@lifeomic/dynamodb-dataloader": "1.0.2",
     "@lifeomic/lambda-tools": "13.0.1",
     "aws-sdk": "^2.883.0",
-    "lodash": "4.17.21",
+    "lodash": "^4.17.21",
     "node-cache": "4.2.1",
     "np": "2.18.3",
     "request-promise-native": "1.0.5"
