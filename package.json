@@ -1,0 +1,21 @@
+{
+  "name": "testdependency-resolution",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@jupiterone/koa": "11.0.7",
+    "@jupiterone/typescript-tools": "13.0.2",
+    "@lifeomic/alpha": "1.3.1",
+    "@lifeomic/dynamodb-dataloader": "1.0.2",
+    "@lifeomic/lambda-tools": "13.0.1",
+    "aws-sdk": "^2.883.0",
+    "lodash": "4.17.21",
+    "node-cache": "4.2.1",
+    "np": "2.18.3",
+    "request-promise-native": "1.0.5"
+  },
+  "resolutions": {
+    "lodash": "4.17.21"
+  }
+}
