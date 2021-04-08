@@ -229,4 +229,17 @@ Installation with Yarn produces an incorrect BOM for lodash
 Installation with NPM produces slightly different (but still incorrect) BOM for
 lodash
 
-Removing the private `@jupiterone/koa` repo
+Removing the private `@jupiterone/koa` repo, and again installing with NPM, then
+Yarn, and generating the BOM files `bom-{yarn,npm}-sans-private-pkg.json`
+removes this false positive:
+
+```
+❯ grep lodash bom-*-sans-private-pkg.json | grep 4.17
+bom-npm-sans-private-pkg.json:      "purl": "pkg:npm/lodash@4.17.21",
+bom-npm-sans-private-pkg.json:      "bom-ref": "pkg:npm/lodash@4.17.21"
+bom-yarn-sans-private-pkg.json:      "purl": "pkg:npm/lodash@4.17.21",
+bom-yarn-sans-private-pkg.json:      "bom-ref": "pkg:npm/lodash@4.17.21"
+```
+
+This BOM discrepancy is problematic when it comes to vulnerable 3rd party
+package analysis, as it results in false-positives.
